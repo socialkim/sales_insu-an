@@ -9,13 +9,14 @@
   href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root{
-    --paper:#F6F4EF; --card:#FFFFFF; --ink:#191D2A; --ink-soft:#5A6072;
-    --navy:#1F2B5B; --navy-2:#2C3D7A; --gold:#E0A23A; --gold-deep:#B97E1C;
-    --teal:#16A38C; --teal-deep:#0E7D6B; --line:#E6E0D4; --line-2:#D9D2C4;
-    --code:#10152B; --code-line:#2A3358; --code-ink:#E7E9F5; --code-dim:#9AA3C9;
+    /* ITCL light — blue leads, coral signs, purple/magenta support */
+    --paper:#F5F6FB; --card:#FFFFFF; --ink:#14172B; --ink-soft:#4C5270;
+    --navy:#2964FF; --navy-2:#1E3FD8; --gold:#FF5A4F; --gold-deep:#E23D33;
+    --teal:#6B47DC; --teal-deep:#5636C4; --line:#E4E7F3; --line-2:#D6DAEC;
+    --code:#12142B; --code-line:#2B2F55; --code-ink:#E9EBFA; --code-dim:#9AA7DE;
     --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Pretendard Variable",monospace;
     --sans:"Pretendard Variable",Pretendard,-apple-system,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-    --shadow:0 1px 2px rgba(25,29,42,.04),0 8px 24px rgba(25,29,42,.06);
+    --shadow:0 1px 2px rgba(20,23,60,.04),0 10px 26px rgba(20,23,60,.07);
     --radius:16px;
   }
   *{box-sizing:border-box;}
@@ -29,19 +30,23 @@
 
   /* ---------- header ---------- */
   header.top{
-    background:var(--navy); color:#fff; padding:18px 0 16px;
+    color:#fff; padding:20px 0 18px;
+    background:
+      radial-gradient(90% 170% at 100% 0%, rgba(232,53,140,.38), transparent 56%),
+      radial-gradient(85% 150% at 0% 100%, rgba(107,71,220,.5), transparent 60%),
+      linear-gradient(140deg,#12173F 0%,#1B32A6 55%,#2964FF 125%);
     border-bottom:3px solid var(--gold);
   }
   .brandrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
   .kicker{
     font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
-    color:var(--gold); border:1px solid rgba(224,162,58,.45); border-radius:999px;
+    color:#FFC9C4; border:1px solid rgba(255,120,110,.55); border-radius:999px; background:rgba(255,90,79,.12);
     padding:4px 10px; white-space:nowrap;
   }
   header.top h1{
     font-size:22px; font-weight:800; margin:12px 0 4px; letter-spacing:-.02em; line-height:1.25;
   }
-  header.top p{margin:0;color:#C7CDE6;font-size:13.5px;}
+  header.top p{margin:0;color:#CBD6FF;font-size:13.5px;}
 
   /* ---------- hero ---------- */
   .hero{padding:22px 0 6px;}
@@ -68,13 +73,13 @@
   }
   .copy-btn{
     margin-left:auto; font-family:var(--sans); font-size:12.5px; font-weight:700;
-    color:#0E1226; background:var(--gold); border:none; border-radius:8px;
+    color:#fff; background:var(--gold); border:none; border-radius:8px;
     padding:7px 13px; cursor:pointer; white-space:nowrap; transition:transform .08s ease, background .15s ease;
     min-height:34px;
   }
-  .copy-btn:hover{background:#EBB14E;}
+  .copy-btn:hover{background:#FF6F66;}
   .copy-btn:active{transform:scale(.96);}
-  .copy-btn.done{background:var(--teal);color:#fff;}
+  .copy-btn.done{background:#12B76A;color:#fff;}
 
   /* ---------- tabs ---------- */
   nav.tabs{
@@ -92,7 +97,7 @@
     padding:8px 14px; cursor:pointer; white-space:nowrap; transition:all .15s ease; min-height:38px;
   }
   .tab .n{font-family:var(--mono);font-size:11px;opacity:.6;margin-right:5px;}
-  .tab:hover{color:var(--navy);background:#EEEAE0;}
+  .tab:hover{color:var(--navy-2);background:#E9EDFC;}
   .tab.active{color:#fff;background:var(--navy);border-color:var(--navy);}
   .tab.active .n{opacity:.7;color:var(--gold);}
 
@@ -124,12 +129,12 @@
     font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.04em;
     padding:3px 8px;border-radius:999px;white-space:nowrap;
   }
-  .badge.pension{background:rgba(224,162,58,.16);color:var(--gold-deep);border:1px solid rgba(224,162,58,.4);}
-  .badge.general{background:rgba(22,163,140,.13);color:var(--teal-deep);border:1px solid rgba(22,163,140,.35);}
-  .badge.lv{background:#EEF0F8;color:var(--navy-2);border:1px solid #DADFF0;}
+  .badge.pension{background:rgba(232,53,140,.10);color:#C11E6F;border:1px solid rgba(232,53,140,.35);}
+  .badge.general{background:rgba(107,71,220,.10);color:var(--teal-deep);border:1px solid rgba(107,71,220,.32);}
+  .badge.lv{background:#EDF1FF;color:var(--navy-2);border:1px solid #CBD8FF;}
 
   .situation{
-    font-size:14px;background:#F3F1EA;border-left:3px solid var(--gold);
+    font-size:14px;background:#FFF3F1;border-left:3px solid var(--gold);
     padding:9px 12px;border-radius:0 8px 8px 0;margin:4px 0 2px;
   }
   .situation b{color:var(--gold-deep);}
@@ -176,14 +181,14 @@
     font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--navy);
     border-radius:9px;padding:10px 9px;flex:0 0 auto;min-width:50px;text-align:center;letter-spacing:.02em;
   }
-  .dl .ext.csv{background:var(--teal-deep);} .dl .ext.txt{background:var(--gold-deep);}
+  .dl .ext.csv{background:#0EA371;} .dl .ext.txt{background:var(--teal);}
   .dl .meta{min-width:0;}
   .dl .meta .fn{font-weight:700;font-size:14px;word-break:break-all;}
   .dl .meta .ds{font-size:12.5px;color:var(--ink-soft);}
   .dl .arrow{margin-left:auto;color:var(--gold-deep);font-weight:800;font-size:18px;flex:0 0 auto;}
 
   .note{
-    font-size:12.5px;color:var(--ink-soft);background:#EFEDE5;border:1px solid var(--line);
+    font-size:12.5px;color:var(--ink-soft);background:#EEF1FC;border:1px solid var(--line);
     border-radius:12px;padding:12px 14px;margin:16px 0;
   }
   .note b{color:var(--navy-2);}
@@ -215,6 +220,102 @@
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;}
   }
+
+/* ===== v2 additions ===== */
+.subcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;margin:14px 0}
+.subcard h3{margin:0 0 6px;font-size:17px}
+.subcard .muted{margin:0 0 10px}
+.btn{appearance:none;border:1.5px solid var(--navy);background:var(--navy);color:#fff;border-radius:10px;padding:10px 16px;font-weight:700;font-size:14px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--navy)}
+.btn:active{transform:translateY(1px)}
+/* quiz */
+.qz .q{font-weight:700;margin:12px 0 8px;font-size:15px}
+.qz .opts{display:flex;flex-wrap:wrap;gap:8px}
+.qz .opt{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px;cursor:pointer}
+.qz .opt.sel{border-color:var(--navy);background:var(--navy);color:#fff}
+.qz .verdict{display:none;margin-top:14px;border-left:4px solid var(--gold);background:#FFF4F2;border-radius:0 12px 12px 0;padding:12px 14px;font-size:14.5px}
+.qz .verdict.show{display:block}
+/* css matrix */
+.mx{position:relative;border:1px solid var(--line);border-radius:16px;background:#fff;height:300px;margin:10px 0 4px}
+.mx::before,.mx::after{content:"";position:absolute;background:var(--line)}
+.mx::before{left:8%;right:8%;top:50%;height:2px}
+.mx::after{top:8%;bottom:8%;left:50%;width:2px}
+.mx .axl{position:absolute;font-size:11.5px;color:var(--muted);font-weight:600}
+.mx .axl.l{left:10px;top:50%;transform:translateY(-140%)}
+.mx .axl.r{right:10px;top:50%;transform:translateY(-140%)}
+.mx .axl.t{top:8px;left:50%;transform:translateX(-50%)}
+.mx .axl.b{bottom:8px;left:50%;transform:translateX(-50%)}
+.mx .pt{position:absolute;transform:translate(-50%,-50%);color:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;font-weight:700;line-height:1.15;text-align:center;box-shadow:0 5px 12px rgba(20,23,60,.16)}
+.mx .pt small{display:block;font-weight:500;font-size:10px;opacity:.85}
+/* builder */
+.builder .row{display:grid;grid-template-columns:110px 1fr;gap:8px;align-items:center;margin:8px 0}
+.builder label{font-size:13px;font-weight:700;color:var(--navy)}
+.builder select{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;background:#fff;color:var(--ink)}
+.builder .togs{display:flex;flex-wrap:wrap;gap:8px}
+.tog{border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;cursor:pointer;background:#fff;user-select:none}
+.tog.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.builder .actions{margin-top:12px;display:flex;gap:8px}
+/* filter/search */
+.filterbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 16px}
+.search{flex:1 1 220px;min-width:0;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;font-size:14px;background:#fff}
+.fchip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
+.fchip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.nores{display:none;color:var(--muted);font-size:14px;padding:8px 2px}
+/* calculators */
+.calcrow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.calcrow:last-of-type{border-bottom:0}
+.calcrow input[type=checkbox]{width:19px;height:19px;accent-color:var(--teal);flex:none}
+.calcrow .nm{flex:1;font-size:14px;min-width:0}
+.calcrow input[type=number]{width:74px;padding:8px;border:1.5px solid var(--line);border-radius:9px;font-size:14px;text-align:right}
+.calcrow .u{font-size:12.5px;color:var(--muted)}
+.sumband{margin-top:12px;background:linear-gradient(135deg,#1B32A6,#2964FF);color:#fff;border-radius:14px;padding:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.sumband b{display:block;font-size:clamp(17px,4.6vw,24px);color:#FFB4AB;font-variant-numeric:tabular-nums}
+.sumband span{font-size:11.5px;opacity:.85}
+.igrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.igrid .f label{display:block;font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.igrid .f input{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font-size:15px}
+.rbars{margin-top:14px}
+.rbar{margin:10px 0}
+.rbar .lab{display:flex;justify-content:space-between;font-size:13.5px;font-weight:700;margin-bottom:5px}
+.rbar .lab b{font-variant-numeric:tabular-nums}
+.rbar .track{height:26px;background:#E9ECF8;border-radius:999px;overflow:hidden}
+.rbar .fill{height:100%;border-radius:999px;width:0;transition:width .5s ease}
+.rbar.db .fill{background:var(--navy)}.rbar.db .lab b{color:var(--navy)}
+.rbar.dc .fill{background:var(--gold)}.rbar.dc .lab b{color:var(--gold-deep)}
+.delta{margin-top:10px;font-size:14px;background:#FFF4F2;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:10px 13px}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+@media (max-width:520px){
+  .builder .row{grid-template-columns:1fr}
+  .igrid{grid-template-columns:1fr 1fr}
+}
+
+
+/* ===== prep tab (① 준비·파일받기) — ported patterns ===== */
+.stepflow{counter-reset:st;display:grid;gap:10px;margin:12px 0}
+.step{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px}
+.step .n{counter-increment:st;flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step .n::before{content:counter(st)}
+.step h4{margin:0 0 3px;font-size:14px}
+.step p{margin:0;font-size:13px;color:var(--muted);line-height:1.55}
+.dlpanel{border:2px solid #0E9F6E;background:#F1FBF6;border-radius:16px;padding:16px 16px 10px;margin:14px 0 18px}
+.dlpanel .ph{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:800;color:#0b7a52;margin:0 0 4px}
+.dlpanel .pd{font-size:13px;color:var(--ink);margin:0 0 6px;line-height:1.55}
+.dlgrid{display:grid;gap:10px;margin:10px 0 6px}
+.dlbtn{display:flex;align-items:center;gap:12px;border:1.5px solid #BFE7D5;border-radius:14px;padding:12px 13px;background:#FBFFFD;text-decoration:none;color:var(--ink)}
+.dlbtn:active{transform:scale(.99)}
+.ftype{flex:0 0 auto;font-size:11px;font-weight:800;color:#fff;padding:6px 9px;border-radius:7px;letter-spacing:.4px}
+.ftype.csv{background:#0E9F6E}.ftype.txt{background:var(--navy)}
+.dlmeta{flex:1;min-width:0}
+.dlname{font-size:13.5px;font-weight:800;word-break:break-all;line-height:1.3}
+.dldesc{font-size:12px;color:var(--muted)}
+.dlcta{flex:0 0 auto;font-size:12.5px;font-weight:800;color:#fff;background:#0E9F6E;padding:8px 13px;border-radius:999px;white-space:nowrap}
+.infobox{border:1px solid var(--line);border-left:4px solid var(--teal);background:#fff;border-radius:0 12px 12px 0;padding:11px 14px;font-size:13.5px;margin:10px 0;line-height:1.6}
+.mcpurl{display:inline-block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;background:#12142B;color:#7EE2A8;padding:7px 12px;border-radius:8px;margin-top:6px;word-break:break-all;user-select:all}
+.sec0{margin:28px 0 8px;font-size:16.5px;font-weight:800;color:var(--navy-2)}
+
 </style>
 </head>
 <body>
@@ -229,10 +330,30 @@
   </div>
 </header>
 
-<section class="hero">
+<nav class="tabs">
+  <div class="tabs-inner" role="tablist">
+    <button class="tab active" data-tab="t0" role="tab"><span class="n">01</span>준비·파일받기</button>
+    <button class="tab" data-tab="t1" role="tab"><span class="n">02</span>4대 도구</button>
+    <button class="tab" data-tab="t2" role="tab"><span class="n">03</span>프롬프트 2무기</button>
+    <button class="tab" data-tab="t3" role="tab"><span class="n">04</span>영업 8케이스</button>
+    <button class="tab" data-tab="t4" role="tab"><span class="n">05</span>자료 제작</button>
+    <button class="tab" data-tab="t5" role="tab"><span class="n">06</span>커넥터·자동화</button>
+    <button class="tab" data-tab="t6" role="tab"><span class="n">07</span>워크플로우</button>
+    <button class="tab" data-tab="t7" role="tab"><span class="n">08</span>MCP 시연</button>
+    <button class="tab" data-tab="t8" role="tab"><span class="n">09</span>App 만들기</button>
+  </div>
+</nav>
+
+<main>
   <div class="wrap">
+
+  <!-- ====== TAB 0 : 준비 · 파일받기 ====== -->
+  <section class="panel active" id="t0" role="tabpanel">
+    <h2 class="panel-h">시작하기 — 준비 · 파일받기</h2>
+    <p class="panel-lead">이 탭에서 <b>계정 로그인 → 실습 파일 다운로드 → MCP 연결</b>까지 마치고, ②탭부터 본 실습을 시작합니다.</p>
+
     <p class="thesis">AI는 영업을 대체하지 않습니다. <b>AI를 쓰는 영업</b>이, 안 쓰는 영업을 대체할 뿐입니다.</p>
-    <p class="thesis-sub">아래 프롬프트 하나를 복사해, 지금 ChatGPT·Claude·Gemini에 붙여넣어 보세요.</p>
+    <p class="thesis-sub">아래 프롬프트 하나를 복사해, 지금 ChatGPT·Claude·Gemini에 붙여넣어 보세요 — 오늘의 첫 마일리지입니다.</p>
 
     <div class="prompt" data-prompt>
       <div class="prompt-head">
@@ -247,28 +368,92 @@
 내가 다 답하면 그때 (1) 핵심 브리핑 (2) 예상 질문 (3) 추천 화법 순으로 정리해줘.
 바로 답하지 말고, 먼저 질문부터 시작해.</pre>
     </div>
-  </div>
-</section>
 
-<nav class="tabs">
-  <div class="tabs-inner" role="tablist">
-    <button class="tab active" data-tab="t1" role="tab"><span class="n">01</span>4대 도구</button>
-    <button class="tab" data-tab="t2" role="tab"><span class="n">02</span>프롬프트 2무기</button>
-    <button class="tab" data-tab="t3" role="tab"><span class="n">03</span>영업 8케이스</button>
-    <button class="tab" data-tab="t4" role="tab"><span class="n">04</span>자료 제작</button>
-    <button class="tab" data-tab="t5" role="tab"><span class="n">05</span>커넥터·자동화</button>
-    <button class="tab" data-tab="t6" role="tab"><span class="n">06</span>워크플로우</button>
-    <button class="tab" data-tab="t7" role="tab"><span class="n">07</span>MCP 시연</button>
-    <button class="tab" data-tab="t8" role="tab"><span class="n">08</span>App 만들기</button>
-    <button class="tab" data-tab="t9" role="tab"><span class="n">09</span>실습 파일</button>
-  </div>
-</nav>
+    <h3 class="sec0">🚦 진행 순서 — 4단계면 준비 끝</h3>
+    <div class="stepflow">
+      <div class="step"><div class="n"></div><div><h4>4대 도구 로그인</h4><p>ChatGPT · Gemini · Claude · Genspark — 무료 계정으로 충분합니다. 도구 소개는 ②탭에.</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>실습 파일 9개 다운로드</h4><p>바로 아래 초록 패널에서 받으세요. ④~⑦탭 프롬프트와 함께 업로드해 사용합니다.</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>MCP 서버 3개 연결</h4><p>⑧탭 '진짜 데이터' 시연 준비물입니다. 아래 안내대로 URL만 등록하면 끝. (선택 — 강연장에서는 연결된 화면으로 시연)</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>②탭부터 순서대로</h4><p>도구 → 프롬프트 2무기 → 8케이스 → … → ⑨탭 App 만들기로 마무리 — 오늘 만든 App이 오늘의 마일리지입니다.</p></div></div>
+    </div>
 
-<main>
-  <div class="wrap">
+    <div class="dlpanel" id="downloads">
+      <div class="ph">📥 실습 파일 다운로드 (9개)</div>
+      <div class="pd">아래 파일을 받아(이 페이지와 같은 폴더에 있습니다) 각 탭에서 ChatGPT·Claude·Gemini에 올려 실습하세요. 각 줄 오른쪽 <b style="color:#0b7a52">초록 '다운로드 ↓'</b> 버튼을 누르면 됩니다.</div>
+      <div class="dlgrid">
+        <a class="dlbtn" href="./pension_consultation_log.csv" download>
+          <span class="ftype csv">CSV</span>
+          <span class="dlmeta"><span class="dlname">pension_consultation_log.csv</span><span class="dldesc">상담 기록 로그 — 사업장별 상담 단계·관심사·다음 액션</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./corporate_client_status.csv" download>
+          <span class="ftype csv">CSV</span>
+          <span class="dlmeta"><span class="dlname">corporate_client_status.csv</span><span class="dldesc">기업 고객 현황 — 가입제도·적립금·갱신예정 (케이스 6에서 사용)</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./pension_product_comparison.csv" download>
+          <span class="ftype csv">CSV</span>
+          <span class="dlmeta"><span class="dlname">pension_product_comparison.csv</span><span class="dldesc">DB/DC/IRP 제도 비교표 — 설명·반론 자료</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./objection_scripts.csv" download>
+          <span class="ftype csv">CSV</span>
+          <span class="dlmeta"><span class="dlname">objection_scripts.csv</span><span class="dldesc">반론 화법 모음 — 케이스 3 롤플레잉 보조</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./db_dc_irp_faq.txt" download>
+          <span class="ftype txt">TXT</span>
+          <span class="dlmeta"><span class="dlname">db_dc_irp_faq.txt</span><span class="dldesc">제도 FAQ — 케이스 2 설명 보조</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./client_meeting_notes.txt" download>
+          <span class="ftype txt">TXT</span>
+          <span class="dlmeta"><span class="dlname">client_meeting_notes.txt</span><span class="dldesc">미팅 메모 원본 — 요약·정리 실습용</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./meeting_transcript_sample.txt" download>
+          <span class="ftype txt">TXT</span>
+          <span class="dlmeta"><span class="dlname">meeting_transcript_sample.txt</span><span class="dldesc">미팅 녹취 전사본 — 케이스 6·WF1 (정리→액션아이템→대시보드) 실습</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./email_thread_sample.txt" download>
+          <span class="ftype txt">TXT</span>
+          <span class="dlmeta"><span class="dlname">email_thread_sample.txt</span><span class="dldesc">고객 문의 이메일 스레드 — WF5 답변 초안·요약 실습</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+        <a class="dlbtn" href="./weekly_sales_data.csv" download>
+          <span class="ftype csv">CSV</span>
+          <span class="dlmeta"><span class="dlname">weekly_sales_data.csv</span><span class="dldesc">주간 영업활동 데이터 — WF4 주간 리포트·대시보드 실습</span></span>
+          <span class="dlcta">다운로드 ↓</span>
+        </a>
+      </div>
+      <div class="pd" style="color:var(--muted);font-size:12px;margin-top:4px">※ GitHub Pages 등 정적 호스팅에서 동작합니다. 안 열리면 길게 눌러 '다운로드'를 선택하세요. 모두 강의 실습용 <b>가상 데이터</b>입니다.</div>
+    </div>
+    <p class="note"><b>요약 실습 한 컷</b> — meeting_transcript_sample.txt를 업로드하고 이렇게 시켜보세요: <em>"이 미팅 녹취를 3줄 요약 + 결정사항 + 담당자·기한이 있는 액션아이템 표로 정리하고, 팔로업 메일 초안까지 써줘."</em></p>
+
+    <h3 class="sec0">🔌 MCP 연결 — '진짜 데이터' 콘센트 꽂기 <span class="badge lv">⑧탭 시연 준비</span></h3>
+    <p class="muted" style="margin:0 0 10px">추측 대신 정부 공식 데이터로 답하게 만드는 연결입니다. ChatGPT 웹 기준 4단계 — 한 번만 하면 계속 씁니다.</p>
+    <div class="stepflow">
+      <div class="step"><div class="n"></div><div><h4>설정 → 커넥터(Apps) → 고급</h4><p>'개발자 모드(Developer mode / MCP)'를 켭니다. (ChatGPT Plus·Pro·Team, 웹 기준)</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>대화창에서 개발자 모드 선택</h4><p>도구 메뉴에서 개발자 모드를 활성화하면 연결한 MCP 서버를 호출할 수 있습니다.</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>MCP 서버 3개 등록</h4><p>아래 3개 서버 URL을 등록합니다(인증은 '인증 없음' 선택). 정부 공식 API(국가데이터처·법제처·국토교통부)를 그대로 호출하는 공개 서버입니다.</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>호출할 때는 "○○ MCP를 사용해서…"</h4><p>프롬프트에 어떤 MCP를 쓸지 명시하면 가장 안정적으로 동작합니다. (⑧탭 프롬프트엔 이미 포함되어 있어요)</p></div></div>
+    </div>
+    <div class="infobox"><b>국가데이터처 KOSIS 통계 MCP</b> — 고령인구·기대수명·노령화지수 등 노후 설득 데이터 <span class="badge general">⑧탭 시연 ①</span><br>
+      <code class="mcpurl">https://korean-stats-mcp.fly.dev/mcp</code></div>
+    <div class="infobox"><b>국가법령정보 법령 MCP</b> — 퇴직급여보장법 조문 즉시 조회·가짜 조문(환각) 차단 <span class="badge general">⑧탭 시연 ②</span><br>
+      <code class="mcpurl">https://korean-law-mcp.fly.dev/mcp</code></div>
+    <div class="infobox"><b>국토교통부 건축HUB MCP</b> — 건축물대장·인허가를 자연어로: 사업장 방문 전 스캔, 신설 사업장 리드 발굴 <span class="badge general">⑧탭 시연 ③</span><br>
+      <code class="mcpurl">https://archhub-mcp.fly.dev/mcp</code><br>
+      <span style="font-size:12px;color:var(--muted)">도구 11종(종합카드·층별구성·동단위통계·인허가 파이프라인 등) · 없는 정보는 [NOT_FOUND]로 답해 환각 차단 · 상세: github.com/chrisryugj/archhub-mcp</span></div>
+    <div class="infobox" style="border-left-color:var(--gold)">💡 <b>클로드 사용자라면</b> — 설정 → 커넥터 → '커스텀 커넥터 추가'에 같은 URL을 붙여넣으면 됩니다.</div>
+    <div class="infobox" style="border-left-color:#c0392b">⚠️ <b>안전수칙</b> — 신뢰할 수 없는 MCP 서버는 연결하지 않습니다(정보 유출 위험). 위 3개는 정부 공식 API를 호출하는 공개 서버입니다. 고객 개인정보·계약 원본 등 민감정보 입력은 신중히.</div>
+
+    <p class="tip">준비 끝 — <b>②탭 '4대 도구'</b>부터 시작하세요. 오늘 저녁이 D1입니다.</p>
+  </section>
 
   <!-- ====== TAB 1 : 3대 도구 ====== -->
-  <section class="panel active" id="t1" role="tabpanel">
+  <section class="panel" id="t1" role="tabpanel">
     <h2 class="panel-h">2026년 4대 도구, 골라 타기</h2>
     <p class="panel-lead">한 도구로 다 하려 하지 마세요. 짐 옮길 땐 트럭, 빨리 갈 땐 스포츠카를 고르듯 업무에 맞춰 씁니다.</p>
 
@@ -285,7 +470,7 @@
 
     <div class="card tool gem">
       <h3>Gemini</h3>
-      <p class="model">최신: Gemini 3 / 3.5 Flash · 이미지 Nano Banana 2</p>
+      <p class="model">최신: Gemini 3.1 Pro / 3.5 Flash · 이미지 Nano Banana 2</p>
       <p class="muted">구글 검색·Gmail 연동과 이미지 처리에 강함. 자료조사에 특히 유용.</p>
       <ul>
         <li>기업·업종 최신 정보 리서치</li>
@@ -296,7 +481,7 @@
 
     <div class="card tool cla">
       <h3>Claude</h3>
-      <p class="model">최신: Claude Opus 4.8</p>
+      <p class="model">최신: <b>Claude Fable 5</b> (7/1 재개) · Opus 4.8</p>
       <p class="muted">긴 문서·정교한 분석에 강하고, <b>아티팩트로 작동하는 앱</b>까지 직접 제작. 커넥터로 메일·캘린더·노션 연결.</p>
       <ul>
         <li>제안서·규약·약관 분석</li>
@@ -336,6 +521,47 @@
       </table>
     </div>
     <p class="note">네 개 모두 무료로 시작할 수 있습니다. 일단 다 깔아두고, 오늘 배운 케이스로 하나씩 써보면 손에 빨리 익습니다.</p>
+  
+    <div class="subcard reveal">
+      <h3>🧭 30초 진단 — 나의 '첫 도구'는?</h3>
+      <p class="muted">세 번만 탭하세요. 오늘 밤 제일 먼저 열 도구를 골라드립니다.</p>
+      <div class="qz" id="quiz">
+        <div class="q">Q1. 지금 가장 급한 일은?</div>
+        <div class="opts" data-q="0">
+          <button class="opt" data-v="gpt">빠른 답·화법·메일</button>
+          <button class="opt" data-v="gem">기업·시장 조사</button>
+          <button class="opt" data-v="cla">긴 문서·자료 제작</button>
+          <button class="opt" data-v="gsp">한 번에 알아서</button>
+        </div>
+        <div class="q">Q2. 선호하는 방식은?</div>
+        <div class="opts" data-q="1">
+          <button class="opt" data-v="talk">대화하며 다듬기</button>
+          <button class="opt" data-v="dele">맡기고 결과 받기</button>
+        </div>
+        <div class="q">Q3. 자주 쓰는 환경은?</div>
+        <div class="opts" data-q="2">
+          <button class="opt" data-v="goog">Gmail·구글 문서</button>
+          <button class="opt" data-v="file">사내 문서·PDF</button>
+          <button class="opt" data-v="none">특별히 없음</button>
+        </div>
+        <div class="verdict" id="quizOut"></div>
+      </div>
+    </div>
+
+    <div class="subcard reveal">
+      <h3>🗺 도구 지형도 — 갈아탈 타이밍이 실력</h3>
+      <p class="muted">가로: 빠른 실행 ↔ 깊은 분석 · 세로: 묻고 답하기 ↔ 맡기고 받기. 오늘의 일이 어느 좌표인지부터 물으세요.</p>
+      <div class="mx" role="img" aria-label="4대 도구 2x2 포지셔닝 맵">
+        <span class="axl t">맡기고 받기</span><span class="axl b">묻고 답하기</span>
+        <span class="axl l">빠른 실행</span><span class="axl r">깊은 분석</span>
+        <span class="pt" style="left:22%;top:66%;background:#10A37F">ChatGPT<small>범용 대화</small></span>
+        <span class="pt" style="left:46%;top:78%;background:#2964FF">Gemini<small>검색 리서치</small></span>
+        <span class="pt" style="left:76%;top:52%;background:#D77757">Claude<small>분석·제작</small></span>
+        <span class="pt" style="left:62%;top:22%;background:#6B47DC">Genspark·Claw<small>에이전트</small></span>
+      </div>
+      <p class="tip">한 도구를 '잘' 쓰는 것보다, <b>제때 갈아타는</b> 사람이 이깁니다 — 이게 AI 마일리지입니다.</p>
+    </div>
+
   </section>
 
   <!-- ====== TAB 2 : 두 무기 ====== -->
@@ -373,12 +599,86 @@
     </div>
 
     <p class="note"><b>합치면 강력합니다.</b> ABA로 정보를 끌어내고 → 메타프롬프팅으로 틀을 만들면, 나만의 영업 비서가 완성됩니다. 쓴 만큼 쌓이는 게 'AI 마일리지'입니다.</p>
+  
+    <div class="subcard reveal" id="builderCard">
+      <h3>🛠 프롬프트 빌더 — 메타프롬프팅을 기계로</h3>
+      <p class="muted">상황을 고르면 ABA·메타 구조가 자동 조립됩니다. 만들어진 프롬프트를 복사해 어느 AI에나 붙여넣으세요.</p>
+      <div class="builder">
+        <div class="row"><label>상황</label>
+          <select id="bSit">
+            <option value="research">첫 미팅 전 기업 리서치</option>
+            <option value="explain">DB·DC·IRP 제도 설명</option>
+            <option value="objection">반론(수수료·전환 리스크) 대응</option>
+            <option value="proposal">제안서·팔로업 메일</option>
+            <option value="terms">약관·규약·법령 요약</option>
+            <option value="meeting">미팅 녹취 정리</option>
+            <option value="material">맞춤 영업자료 제작</option>
+            <option value="auto">일정·메일 자동화 지시</option>
+          </select></div>
+        <div class="row"><label>상대</label>
+          <select id="bAud">
+            <option value="hr">인사팀장</option>
+            <option value="cfo">CFO·재무 담당</option>
+            <option value="ceo">중소기업 대표</option>
+            <option value="emp">직원 설명회 청중</option>
+          </select></div>
+        <div class="row"><label>산출물</label>
+          <select id="bOut">
+            <option value="brief">1페이지 브리핑</option>
+            <option value="email">이메일 초안</option>
+            <option value="table">비교 표</option>
+            <option value="role">롤플레잉 시뮬레이션</option>
+            <option value="check">체크리스트</option>
+            <option value="app">웹 대시보드(아티팩트)</option>
+          </select></div>
+        <div class="row"><label>방식</label>
+          <div class="togs">
+            <span class="tog on" id="tAba">ABA — 먼저 나에게 질문</span>
+            <span class="tog" id="tMeta">메타 — 재사용 템플릿으로</span>
+            <span class="tog" id="tTone">톤 — 정중·간결·숫자 중심</span>
+          </div></div>
+        <div class="actions">
+          <button class="btn" id="bGen" type="button">프롬프트 생성</button>
+          <button class="btn ghost" id="bShuffle" type="button">예시 랜덤</button>
+        </div>
+      </div>
+      <div class="prompt" data-prompt style="margin-top:14px">
+        <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">builder_output</span><button class="copy-btn" type="button">복사</button></div>
+        <pre class="prompt-body" id="bBody">위에서 상황을 고르고 [프롬프트 생성]을 누르세요 — ABA·메타 구조가 자동으로 조립됩니다.</pre>
+      </div>
+      <p class="tip">이 빌더가 하는 일이 곧 <b>메타프롬프팅</b>입니다 — 좋은 질문을 '찍어내는 틀'을 갖는 것.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>보너스 — 톤 미러링 <span class="badge general">범용</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 고객사 담당자 말투에 맞춰 메일 톤을 조정하고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">bonus_tone_mirroring</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">아래는 고객 담당자가 보낸 메일이야.
+[고객 메일 붙여넣기]
+1) 이 사람의 말투 특징을 3가지로 분석해줘 (격식 수준 / 문장 길이 / 선호 표현)
+2) 그 톤에 맞춰 내 회신 초안을 써줘. 내용: [회신할 내용 요약]
+3) 너무 비슷해서 어색하지 않게, 예의는 한 단계 더 갖춰줘.</pre>
+    </div>
+
   </section>
 
   <!-- ====== TAB 3 : 영업 6케이스 ====== -->
   <section class="panel" id="t3" role="tabpanel">
     <h2 class="panel-h">영업 현장 8케이스 — "이럴 땐 이렇게"</h2>
     <p class="panel-lead">발굴 → 설명 → 반론 → 제안 → 약관 → 미팅정리 → 맞춤자료 → 롤플레잉. 각 단계 프롬프트를 복사해 바로 써보세요. <span class="badge pension">연금 특화</span> <span class="badge general">범용</span></p>
+
+    <div class="filterbar" id="caseFilter">
+      <input class="search" id="caseSearch" type="search" placeholder="케이스 검색 — 예: 반론, 약관, CFO, 대시보드…" aria-label="케이스 검색">
+      <button class="fchip on" data-k="">전체</button>
+      <button class="fchip" data-k="리서치">리서치</button>
+      <button class="fchip" data-k="반론">반론</button>
+      <button class="fchip" data-k="약관">약관</button>
+      <button class="fchip" data-k="대시보드">대시보드</button>
+      <button class="fchip" data-k="롤플레잉">롤플레잉</button>
+    </div>
+    <p class="nores" id="caseNores">검색 결과가 없습니다 — 다른 키워드로 시도해 보세요.</p>
 
     <div class="card">
       <h3>케이스 1. 첫 미팅 전 기업 리서치 <span class="badge general">범용</span></h3>
@@ -647,12 +947,29 @@ DB형, DC형, IRP의 차이를 각각 3문장으로 설명해줘.
     </div>
 
     <p class="note">모든 워크플로우의 마지막은 사람입니다. 자동화는 초안까지, 발송·확정은 담당자가. 무코딩 자동화 도구(예: Zapier)와 결합하면 더 확장됩니다.</p>
+  
+    <div class="subcard reveal" id="timecalc">
+      <h3>⏱ 시간 회수 계산기 — 내 숫자로 만들기</h3>
+      <p class="muted">도입할 워크플로우를 체크하고, 주당 절감 시간을 내 상황에 맞게 고치세요. (기본값은 강의의 예시 추정)</p>
+      <div class="calcrow"><input type="checkbox" class="tc" data-h="3.0" checked id="tc1"><label class="nm" for="tc1"><b>WF1</b> 미팅 애프터 자동화</label><input type="number" value="3.0" step="0.5" min="0" max="20" aria-label="WF1 시간"><span class="u">h/주</span></div>
+      <div class="calcrow"><input type="checkbox" class="tc" data-h="1.5" checked id="tc2"><label class="nm" for="tc2"><b>WF2</b> 아침 5분 브리핑</label><input type="number" value="1.5" step="0.5" min="0" max="20" aria-label="WF2 시간"><span class="u">h/주</span></div>
+      <div class="calcrow"><input type="checkbox" class="tc" data-h="2.0" checked id="tc3"><label class="nm" for="tc3"><b>WF3</b> 신규 사업장 리서치</label><input type="number" value="2.0" step="0.5" min="0" max="20" aria-label="WF3 시간"><span class="u">h/주</span></div>
+      <div class="calcrow"><input type="checkbox" class="tc" data-h="1.5" checked id="tc4"><label class="nm" for="tc4"><b>WF4</b> 주간 리포트 자동화</label><input type="number" value="1.5" step="0.5" min="0" max="20" aria-label="WF4 시간"><span class="u">h/주</span></div>
+      <div class="calcrow"><input type="checkbox" class="tc" data-h="2.0" checked id="tc5"><label class="nm" for="tc5"><b>WF5</b> 고객 문의 즉답</label><input type="number" value="2.0" step="0.5" min="0" max="20" aria-label="WF5 시간"><span class="u">h/주</span></div>
+      <div class="sumband">
+        <div><b id="tcWeek">10h</b><span>주간 회수</span></div>
+        <div><b id="tcYear">500h</b><span>연간 (×50주)</span></div>
+        <div><b id="tcDays">62일</b><span>영업일 환산 (÷8h)</span></div>
+      </div>
+      <p class="tip">되찾은 시간의 용도는 하나 — <b>고객 접점 재투자</b>. 그게 증폭기의 목적지입니다.</p>
+    </div>
+
   </section>
 
   <!-- ====== TAB 7 : MCP ====== -->
   <section class="panel" id="t7" role="tabpanel">
     <h2 class="panel-h">MCP — AI에 '진짜 데이터'를 꽂다</h2>
-    <p class="panel-lead">MCP는 AI를 외부 데이터·도구에 연결하는 '콘센트'입니다. 추측 대신 공식 데이터로 답하니, 환각(거짓정보)을 줄이고 영업 신뢰를 높입니다.</p>
+    <p class="panel-lead">MCP는 AI를 외부 데이터·도구에 연결하는 '콘센트'입니다. 추측 대신 공식 데이터로 답하니, 환각(거짓정보)을 줄이고 영업 신뢰를 높입니다. <b>연결 방법은 ①탭</b>에 있습니다.</p>
 
     <div class="eyebrow">시연 ① 통계 MCP — 노후 데이터로 무장</div>
     <div class="card">
@@ -680,6 +997,128 @@ DB형, DC형, IRP의 차이를 각각 3문장으로 설명해줘.
     <div class="flowline">흐름: 자연어 질문 → <span class="hl">[연결 승인]</span> → 국가법령정보 원문 조항 인용 + 쉬운 요약</div>
 
     <p class="note"><b>주의 ①</b> MCP가 가져온 데이터도 사람이 한 번 검증합니다(데이터 시점·상관/인과 차이). &nbsp; <b>주의 ②</b> 위 예시는 라이브 시연용입니다. 이 페이지(정적 웹)에서는 직접 호출되지 않으며, 실제 강의에서 강사가 연결을 승인하면 수치·조문이 화면에 나타납니다.</p>
+  
+    <div class="eyebrow">시연 ③ 건축HUB MCP — 사업장을 미리 읽는다</div>
+    <div class="card reveal">
+      <h3>주소 한 줄로 나오는 '사업장 종합카드'</h3>
+      <p class="muted">건축물대장·건축/주택인허가(국토교통부 건축HUB)를 자연어로 조회합니다. 용도지역·연면적·층수·준공연도·주차·내진까지 한 카드 — 공시가격 추이와 신축 인허가 현황도 볼 수 있습니다. 없는 정보는 [NOT_FOUND]로 답해 추측을 차단합니다.</p>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">archhub_profile_demo</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">건축HUB MCP를 사용해서 [광진구 자양동 2-2번지] 건물 정보를
+한눈에 보여줘. (용도지역·주용도·규모·건폐율/용적률·주차·사용승인일)
+※ 대괄호를 방문 예정인 고객사 주소로 바꾸면 그대로 작동합니다.
+번지를 모르면 동까지만 써도 AI가 먼저 지역코드를 찾아 조회합니다.</pre>
+    </div>
+
+    <div class="eyebrow">추가 활용사례 — 현장 7장면</div>
+
+    <div class="card reveal">
+      <h3>사례 1. 지역 맞춤 설득 — "이 동네가 더 급합니다" <span class="badge pension">연금 특화</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 지역 중소기업 대표에게 '왜 지금'을 그 지역 숫자로 보여주고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case1_region</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">통계 MCP를 사용해서 [부산광역시]의 고령인구 비율과
+노년부양비 최근 5년 추이를 조회해줘.
+전국 평균과 비교해 이 지역이 얼마나 빠르게 늙고 있는지 한 문단으로 해석하고,
+지역 중소기업 대표에게 '왜 지금 퇴직연금인가'를 설득하는
+브리핑 포인트 3개로 정리해줘.
+각 포인트에 인용한 수치와 출처(통계표명)를 붙여줘.</pre>
+    </div>
+
+    <div class="card reveal">
+      <h3>사례 2. 업종 데이터로 계산기에 '진짜 기본값' 넣기 <span class="badge pension">연금 특화</span></h3>
+      <div class="situation"><b>이럴 땐</b> — DB·DC 비교 시뮬레이션의 가정치(상승률·근속)를 업종 통계로 채우고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case2_industry</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">통계 MCP를 사용해서 [제조업]의 평균 근속연수와
+최근 임금상승률 통계를 조회해줘.
+이 수치를 기본값으로, DB형·DC형 예상 수령액 비교에 쓸
+'업종 표준 가정 세트'(연봉상승률 %, 근속 년수)를 표로 만들어줘.
+어떤 통계표에서 가져왔는지 명시하고,
+수치가 없으면 추측하지 말고 '확인 필요'로 표시해.</pre>
+    </div>
+
+    <div class="card reveal">
+      <h3>사례 3. "그거 의무 아니잖아요" — 조문으로 답하기 <span class="badge pension">연금 특화</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 제도 의무화 관련 반론에 기억이 아니라 법령 원문으로 답하고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case3_objection</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">법령 MCP를 사용해서 근로자퇴직급여 보장법에서
+퇴직급여제도 설정 의무와 관련된 조문을 찾아줘.
+'우리 회사는 아직 의무 아니지 않냐'는 고객 반론에 답할 수 있게
+(1) 정확한 조문 번호와 원문 요지
+(2) 쉬운 말 설명
+(3) 한 문장 답변 스크립트
+순으로 정리해줘. 조문에 없는 내용은 '조문 외 사항'으로 구분해.</pre>
+    </div>
+
+    <div class="card reveal">
+      <h3>사례 4. DB→DC 전환, 절차를 조문 근거로 <span class="badge pension">연금 특화</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 규약 변경·근로자 동의 절차를 고객 인사팀에 정확히 안내해야 한다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case4_bylaw</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">법령 MCP를 사용해서 퇴직연금 제도 변경(예: DB→DC 전환) 시
+규약 변경과 근로자 동의에 관한 조문들을 찾아줘.
+찾은 조문을 근거로 '고객사 인사팀용 전환 절차 체크리스트'를
+단계 | 해야 할 일 | 근거 조문 — 3열 표로 만들어줘.
+조문 번호는 원문 그대로 쓰고,
+해석이 갈릴 수 있는 부분은 '전문가 확인 권장'으로 표시해.</pre>
+    </div>
+
+    <div class="card reveal">
+      <h3>사례 5. 직원 설명회 Q&amp;A — 통계+법령 콤보 <span class="badge general">범용 패턴</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 내일 설명회 예상 질문에 숫자는 통계로, 제도는 조문으로 한 번에 무장</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case5_townhall</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">내일 고객사 직원 설명회에서 나올 예상 질문 5개에 답을 준비하려고 해.
+숫자가 필요한 질문은 통계 MCP를, 법·제도 질문은 법령 MCP를 사용해서
+질문 | 핵심 답변(2문장) | 근거(통계표명 또는 조문번호) 표로 만들어줘.
+예상 질문:
+① 왜 지금 가입해야 하나
+② DC로 바꾸면 손해 아닌가
+③ 중도인출은 언제 가능한가
+④ 회사가 어려워지면 내 적립금은 어떻게 되나
+⑤ 수수료는 누가 부담하나</pre>
+    </div>
+
+    <div class="card reveal">
+      <h3>사례 6. 방문 전 사업장 스캔 — "발보다 눈이 먼저" <span class="badge pension">연금 특화</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 내일 방문할 고객사, 회사 규모·연식을 미리 읽고 첫 마디를 준비하고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case6_visit_scan</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">내일 [고객사 주소]에 있는 회사를 방문해.
+건축HUB MCP를 사용해서
+(1) 이 건물의 종합카드(용도·연면적·층수·사용승인일·주차)
+(2) 층별 구성(어떤 용도가 몇 ㎡씩 있는지)
+을 조회하고, 영업사원용 '방문 전 브리핑 3줄'로 요약해줘.
+마지막에 준공연도·증축 이력을 소재로 한
+자연스러운 아이스브레이킹 멘트 2개를 제안해줘.
+조회가 안 되는 항목은 추측하지 말고 [NOT_FOUND] 그대로 알려줘.</pre>
+    </div>
+
+    <div class="card reveal">
+      <h3>사례 7. 신설 사업장 리드 발굴 — 인허가 파이프라인 <span class="badge pension">연금 특화</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 담당 지역에서 '곧 입주할' 신규 사업장을 먼저 찾아가고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">mcp_case7_new_leads</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">건축HUB MCP를 사용해서 [○○구 ○○동]에서
+허가는 났지만 아직 사용승인 전인 건축 인허가 현황을 조회해줘.
+그중 업무시설·공장·근린생활시설을 골라
+주소 | 용도 | 연면적 | 허가일 | 단계(착공/미착공) 표로 정리하고,
+'사용승인이 가까운 순'으로 접근 우선순위를 매겨줘.
+이유: 곧 입주할 신설 사업장은 퇴직연금 제도 셋업의 골든타임이니까.</pre>
+    </div>
+
+    <p class="note"><b>일곱 장면의 공통 패턴</b> — "○○ MCP를 사용해서"로 시작하고, 없는 정보는 '확인 필요'로 받기. 이 두 줄이 환각을 막고, 여러분의 말에 조문 번호와 통계표명이 붙게 만듭니다.</p>
+
   </section>
 
   <!-- ====== TAB 8 : App 만들기 ====== -->
@@ -731,63 +1170,43 @@ DB형, DC형, IRP의 차이를 각각 3문장으로 설명해줘.
       <p>· 막막하면 → <b>ABA: "더 좋게 만들려면 뭘 물어봐야 해?"</b></p>
     </div>
     <p class="note">완벽할 필요 없습니다. '나도 만들 수 있다'는 경험이 곧 AI 마일리지입니다. 한 번 만든 사람은 다음엔 더 빠르고 더 잘 만듭니다.</p>
+  
+    <div class="subcard reveal" id="appcalc">
+      <h3>🧮 살아있는 예시 — DB vs DC 간이 비교 계산기</h3>
+      <p class="muted">강의에서 '말로 만든' 바로 그 App입니다. 이 페이지 안에서 실제로 작동합니다 — 숫자를 바꿔보세요.</p>
+      <div class="igrid">
+        <div class="f"><label for="cSal">현재 연봉 (만원)</label><input id="cSal" type="number" value="6000" min="1000" step="100"></div>
+        <div class="f"><label for="cYrs">잔여 근속 (년)</label><input id="cYrs" type="number" value="15" min="1" max="45" step="1"></div>
+        <div class="f"><label for="cG">연봉 상승률 (%/년)</label><input id="cG" type="number" value="3.0" min="0" max="15" step="0.5"></div>
+        <div class="f"><label for="cR">DC 운용수익률 (%/년)</label><input id="cR" type="number" value="6.0" min="0" max="25" step="0.5"></div>
+      </div>
+      <div class="rbars">
+        <div class="rbar db"><div class="lab"><span>DB (확정급여형)</span><b id="oDB">—</b></div><div class="track"><i class="fill" id="fDB"></i></div></div>
+        <div class="rbar dc"><div class="lab"><span>DC (확정기여형·운용)</span><b id="oDC">—</b></div><div class="track"><i class="fill" id="fDC"></i></div></div>
+      </div>
+      <div class="delta" id="oDelta">—</div>
+      <p class="tip">※ 단순 가정 예시입니다(평균임금 근사·세전·수수료 미반영). 실제 수령액은 규약·운용에 따라 다르며, <b>고객 안내용이 아닌 이해용</b>입니다.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>미션 확장 — 주간 영업 대시보드 App <span class="badge lv">응용</span></h3>
+      <div class="situation"><b>이럴 땐</b> — 계산기 다음 단계, 데이터가 들어간 App을 만들고 싶다</div>
+    </div>
+    <div class="prompt reveal" data-prompt>
+      <div class="prompt-head"><span class="dots"><i></i><i></i><i></i></span><span class="prompt-tag">app_sales_dashboard</span><button class="copy-btn" type="button">복사</button></div>
+      <pre class="prompt-body">첨부한 weekly_sales_data.csv를 읽고, 팀 주간 영업 대시보드를 아티팩트 웹앱으로 만들어줘.
+필수 기능:
+1) 담당자별 미팅 수·제안 수·계약 수 막대 그래프
+2) 주차 선택 드롭다운
+3) '이번 주 하이라이트' 자동 요약 3줄
+4) 모바일에서도 보기 좋게
+디자인은 네이비+골드 톤으로 깔끔하게. 먼저 데이터 구조를 확인하고, 이해한 내용을 요약한 뒤 만들어줘.</pre>
+    </div>
+
   </section>
 
   <!-- ====== TAB 9 : 실습 파일 ====== -->
-  <section class="panel" id="t9" role="tabpanel">
-    <h2 class="panel-h">실습 파일 내려받기</h2>
-    <p class="panel-lead">아래 파일을 받아 ChatGPT·Claude·Gemini에 업로드한 뒤, 위 케이스 프롬프트와 함께 써보세요. (모두 가상 데이터)</p>
-
-    <a class="dl" href="./pension_consultation_log.csv" download>
-      <span class="ext csv">CSV</span>
-      <span class="meta"><span class="fn">pension_consultation_log.csv</span><br><span class="ds">상담 기록 로그 — 사업장별 상담 단계·관심사·다음 액션</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./corporate_client_status.csv" download>
-      <span class="ext csv">CSV</span>
-      <span class="meta"><span class="fn">corporate_client_status.csv</span><br><span class="ds">기업 고객 현황 — 가입제도·적립금·갱신예정 (케이스 6에서 사용)</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./pension_product_comparison.csv" download>
-      <span class="ext csv">CSV</span>
-      <span class="meta"><span class="fn">pension_product_comparison.csv</span><br><span class="ds">DB/DC/IRP 제도 비교표 — 설명·반론 자료</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./objection_scripts.csv" download>
-      <span class="ext csv">CSV</span>
-      <span class="meta"><span class="fn">objection_scripts.csv</span><br><span class="ds">반론 화법 모음 — 케이스 3 롤플레잉 보조</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./db_dc_irp_faq.txt" download>
-      <span class="ext txt">TXT</span>
-      <span class="meta"><span class="fn">db_dc_irp_faq.txt</span><br><span class="ds">제도 FAQ — 케이스 2 설명 보조</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./client_meeting_notes.txt" download>
-      <span class="ext txt">TXT</span>
-      <span class="meta"><span class="fn">client_meeting_notes.txt</span><br><span class="ds">미팅 메모 원본 — 요약·정리 실습용</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./meeting_transcript_sample.txt" download>
-      <span class="ext txt">TXT</span>
-      <span class="meta"><span class="fn">meeting_transcript_sample.txt</span><br><span class="ds">미팅 녹취 전사본 — 케이스 6·WF1 (정리→액션아이템→대시보드) 실습</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./email_thread_sample.txt" download>
-      <span class="ext txt">TXT</span>
-      <span class="meta"><span class="fn">email_thread_sample.txt</span><br><span class="ds">고객 문의 이메일 스레드 — WF5 답변 초안·요약 실습</span></span>
-      <span class="arrow">↓</span>
-    </a>
-    <a class="dl" href="./weekly_sales_data.csv" download>
-      <span class="ext csv">CSV</span>
-      <span class="meta"><span class="fn">weekly_sales_data.csv</span><br><span class="ds">주간 영업활동 데이터 — WF4 주간 리포트·대시보드 실습</span></span>
-      <span class="arrow">↓</span>
-    </a>
-
-    <p class="note"><b>요약 실습 한 컷</b> — meeting_transcript_sample.txt를 업로드하고 이렇게 시켜보세요: <em>"이 미팅 녹취를 3줄 요약 + 결정사항 + 담당자·기한이 있는 액션아이템 표로 정리하고, 팔로업 메일 초안까지 써줘."</em></p>
-  </section>
-
-  </div>
+      </div>
 </main>
 
 <footer>
@@ -802,17 +1221,22 @@ DB형, DC형, IRP의 차이를 각각 3문장으로 설명해줘.
 
 <script>
 (function(){
+  document.documentElement.classList.add('js');
+  var reduceMotion = false;
+  try{ reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){}
+
   // ---- tab switching ----
   var tabs = document.querySelectorAll('.tab');
   var panels = document.querySelectorAll('.panel');
+  function safeScroll(fn){ try{ fn(); }catch(e){} }
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){
       var id = tab.getAttribute('data-tab');
       tabs.forEach(function(t){ t.classList.toggle('active', t===tab); });
       panels.forEach(function(p){ p.classList.toggle('active', p.id===id); });
-      // scroll active tab into view + jump to top of content
-      tab.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'});
-      window.scrollTo({top: document.querySelector('nav.tabs').offsetTop - 4, behavior:'smooth'});
+      safeScroll(function(){ tab.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'}); });
+      safeScroll(function(){ window.scrollTo({top: document.querySelector('nav.tabs').offsetTop - 4, behavior:'smooth'}); });
+      revealNow();
     });
   });
 
@@ -851,6 +1275,232 @@ DB형, DC형, IRP의 차이를 각각 3문장으로 설명해줘.
     if(!body) return;
     doCopy(body.textContent.trim(), btn);
   });
+
+  // ---- hero count-up ----
+  (function(){
+    var els = document.querySelectorAll('[data-count]');
+    els.forEach(function(el){
+      var target = parseFloat(el.getAttribute('data-count'));
+      var suf = el.getAttribute('data-suffix') || '';
+      var dec = (String(el.getAttribute('data-count')).split('.')[1]||'').length;
+      if(reduceMotion){ el.textContent = target.toFixed(dec) + suf; return; }
+      var t0 = null, dur = 1200;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min(1, (ts - t0)/dur);
+        p = 1 - Math.pow(1-p, 3);
+        el.textContent = (target*p).toFixed(dec) + suf;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      try{ requestAnimationFrame(step); }catch(e){ el.textContent = target.toFixed(dec)+suf; }
+    });
+  })();
+
+  // ---- scroll reveal ----
+  var io = null;
+  function revealNow(){
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+      if(!io){ el.classList.add('in'); return; }
+      var r = el.getBoundingClientRect();
+      if(r.top < (window.innerHeight||800)) el.classList.add('in');
+      else io.observe(el);
+    });
+  }
+  try{
+    if('IntersectionObserver' in window && !reduceMotion){
+      io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, {rootMargin:'0px 0px -8% 0px'});
+    }
+  }catch(e){ io = null; }
+  revealNow();
+
+  // ---- t1 quiz ----
+  (function(){
+    var quiz = document.getElementById('quiz'); if(!quiz) return;
+    var ans = {};
+    var NAMES = {gpt:'ChatGPT', gem:'Gemini', cla:'Claude', gsp:'Genspark'};
+    var WHY = {
+      gpt:'가장 빨리 손에 익는 만능형 — 화법·메일·일정부터 시작하세요.',
+      gem:'검색·구글 연동이 강점 — 기업 리서치와 Gmail 업무에 바로 붙습니다.',
+      cla:'긴 문서와 제작에 최강 — 제안서·약관 분석, 그리고 ⑨탭 App 만들기의 주인공.',
+      gsp:'말 한 줄로 조사→슬라이드→정리까지 — 맡기는 방식이 편하면 여기부터.'
+    };
+    quiz.addEventListener('click', function(e){
+      var b = e.target.closest('.opt'); if(!b) return;
+      var grp = b.closest('.opts');
+      grp.querySelectorAll('.opt').forEach(function(o){ o.classList.toggle('sel', o===b); });
+      ans[grp.getAttribute('data-q')] = b.getAttribute('data-v');
+      if(!(ans['0'] && ans['1'] && ans['2'])) return;
+      var score = {gpt:0, gem:0, cla:0, gsp:0};
+      score[ans['0']] += 3;
+      if(ans['1']==='dele'){ score.gsp += 2; score.cla += 1; } else { score.gpt += 1.5; score.gem += 1; }
+      if(ans['2']==='goog') score.gem += 2;
+      if(ans['2']==='file') score.cla += 2;
+      var best = 'gpt'; Object.keys(score).forEach(function(k){ if(score[k] > score[best]) best = k; });
+      var out = document.getElementById('quizOut');
+      out.innerHTML = '오늘 밤 첫 도구: <b>' + NAMES[best] + '</b> — ' + WHY[best] +
+        ' <span style="color:var(--muted)">(나머지 셋도 곧 씁니다 — 순서의 문제일 뿐)</span>';
+      out.classList.add('show');
+    });
+  })();
+
+  // ---- t2 prompt builder ----
+  (function(){
+    var gen = document.getElementById('bGen'); if(!gen) return;
+    var SIT = {
+      research:{ctx:'[기업명: ○○ / 업종: ○○ / 직원수: 약 ○○명]의 첫 미팅을 준비하려고 해.',
+                task:'1) 이 업종의 인력·근속 특성  2) 이 규모 기업의 퇴직연금 고민  3) 첫 미팅 질문 3개  4) 우리가 강조할 포인트 2개'},
+      explain:{ctx:'상대가 DB·DC·IRP 차이를 어려워하는 상황이야.',
+               task:'세 제도의 차이를 상대 눈높이의 비유 1개씩과 함께 설명하고, 흔한 오해 2가지를 바로잡아줘.'},
+      objection:{ctx:'상대가 "수수료가 비싸다 / 지금 옮기면 손해 아니냐"고 반론하는 상황이야.',
+                 task:'예상 반론 3가지와 각각의 대응 논리(숫자 근거 포함)를 정리해줘. 삼성생명 DC 원리금비보장 1년 수익률 25.17%(10조+ 사업자 중 1위, 금감원 26.1Q 공시)를 근거로 활용하되 과장 없이.'},
+      proposal:{ctx:'미팅을 마친 고객사에 제안 요약과 팔로업 메일을 보내려는 상황이야. [미팅 메모 붙여넣기]',
+                task:'(1) 제안 핵심 요약 5줄 (2) 정중한 팔로업 이메일 초안 (3) 다음 미팅 제안 문장 1개.'},
+      terms:{ctx:'첨부한 약관/규약/법령 문서를 고객에게 설명해야 해. [문서 첨부]',
+             task:'(1) 3문장 핵심 요약 (2) 고객이 물을 질문 5개와 답 (3) 영업자가 주의할 조항 2개. 원문 조항 번호를 함께 표기해줘.'},
+      meeting:{ctx:'방금 끝난 미팅 녹취/메모를 정리하려고 해. [녹취 붙여넣기]',
+               task:'(1) 3줄 요약 (2) 결정사항 (3) 담당자·기한이 있는 액션아이템 표 (4) 팔로업 메일 초안.'},
+      material:{ctx:'특정 고객사를 위한 맞춤 영업자료를 만들려는 상황이야. [업종/규모/관심사 입력]',
+                task:'1페이지 구성안(헤드라인·3개 섹션·마무리 제안)을 잡고, 각 섹션의 실제 문안까지 써줘.'},
+      auto:{ctx:'커넥터(캘린더·Gmail)가 연결된 상태에서 반복 업무를 맡기려는 상황이야.',
+            task:'오늘 일정과 안 읽은 중요 메일을 확인해서 (1) 오늘 브리핑 (2) 회신 필요 메일 목록 (3) 후속 할 일 제안 순으로 정리해줘.'}
+    };
+    var AUD = {hr:'상대는 인사팀장 — 실무 운영과 직원 만족이 관심사야.',
+               cfo:'상대는 CFO — 비용·리스크·숫자로 말해야 해.',
+               ceo:'상대는 중소기업 대표 — 바쁘니 결론부터, 쉽게.',
+               emp:'상대는 직원 설명회 청중 — 전문용어 없이, 내 돈 관점으로.'};
+    var OUT = {brief:'산출물: 1페이지 브리핑(제목·핵심 3가지·다음 액션).',
+               email:'산출물: 바로 보낼 수 있는 이메일 초안(제목 포함).',
+               table:'산출물: 항목별 비교 표(마지막 행에 한줄 결론).',
+               role:'산출물: 롤플레잉 — 네가 상대 역할을 맡아 실전처럼 반박해줘. 내가 답하면 코칭 포인트를 알려줘.',
+               check:'산출물: 실행 체크리스트(순서·담당·기한 칸 포함).',
+               app:'산출물: 아티팩트 웹앱 — 입력값을 바꾸면 결과가 갱신되는 화면으로.'};
+    function build(){
+      var s = SIT[document.getElementById('bSit').value];
+      var a = AUD[document.getElementById('bAud').value];
+      var o = OUT[document.getElementById('bOut').value];
+      var lines = [];
+      lines.push('너는 기업 퇴직연금 영업을 돕는 전문 어시스턴트야.');
+      lines.push(s.ctx);
+      lines.push(a);
+      lines.push('');
+      lines.push('해줄 일: ' + s.task);
+      lines.push(o);
+      if(document.getElementById('tAba').classList.contains('on')){
+        lines.push('');
+        lines.push('바로 답하지 말고, 좋은 결과에 필요한 정보를 먼저 나에게 질문해줘. 한 번에 하나씩, 최대 5개.');
+      }
+      if(document.getElementById('tMeta').classList.contains('on')){
+        lines.push('작업이 끝나면, 다음에 [   ]만 바꿔 재사용할 수 있는 템플릿 버전도 만들어줘.');
+      }
+      if(document.getElementById('tTone').classList.contains('on')){
+        lines.push('톤: 정중하고 간결하게, 주장마다 숫자 근거를 붙여서.');
+      }
+      lines.push('모르는 사실은 추측하지 말고 \'확인 필요\'로 표시해줘.');
+      document.getElementById('bBody').textContent = lines.join('\n');
+    }
+    gen.addEventListener('click', build);
+    document.getElementById('bShuffle').addEventListener('click', function(){
+      function rnd(sel){ var el=document.getElementById(sel); el.selectedIndex = Math.floor(Math.random()*el.options.length); }
+      rnd('bSit'); rnd('bAud'); rnd('bOut'); build();
+    });
+    ['tAba','tMeta','tTone'].forEach(function(id){
+      document.getElementById(id).addEventListener('click', function(){ this.classList.toggle('on'); });
+    });
+  })();
+
+  // ---- t3 case filter ----
+  (function(){
+    var panel = document.getElementById('t3'); var input = document.getElementById('caseSearch');
+    if(!panel || !input) return;
+    // group siblings: each group starts at a .card and includes following non-.card elements
+    var kids = Array.prototype.slice.call(panel.children);
+    var groups = []; var cur = null;
+    kids.forEach(function(el){
+      if(el.classList.contains('card')){ cur = {head:el, items:[el]}; groups.push(cur); }
+      else if(cur && !el.classList.contains('panel-h') && !el.classList.contains('panel-lead')
+              && el.id!=='caseFilter' && el.id!=='caseNores'){ cur.items.push(el); }
+    });
+    function apply(q){
+      q = (q||'').trim().toLowerCase();
+      var shown = 0;
+      groups.forEach(function(g){
+        var text = g.items.map(function(el){ return el.textContent; }).join(' ').toLowerCase();
+        var on = !q || text.indexOf(q) !== -1;
+        g.items.forEach(function(el){ el.style.display = on ? '' : 'none'; });
+        if(on) shown++;
+      });
+      var nores = document.getElementById('caseNores');
+      if(nores) nores.style.display = shown ? 'none' : 'block';
+    }
+    input.addEventListener('input', function(){
+      document.querySelectorAll('#caseFilter .fchip').forEach(function(c){ c.classList.remove('on'); });
+      apply(input.value);
+    });
+    document.getElementById('caseFilter').addEventListener('click', function(e){
+      var c = e.target.closest('.fchip'); if(!c) return;
+      document.querySelectorAll('#caseFilter .fchip').forEach(function(x){ x.classList.toggle('on', x===c); });
+      input.value = '';
+      apply(c.getAttribute('data-k'));
+    });
+  })();
+
+  // ---- t6 time calculator ----
+  (function(){
+    var box = document.getElementById('timecalc'); if(!box) return;
+    function fmt(n){ return (Math.round(n*10)/10) + ''; }
+    function recalc(){
+      var sum = 0;
+      box.querySelectorAll('.calcrow').forEach(function(row){
+        var cb = row.querySelector('input[type=checkbox]');
+        var num = row.querySelector('input[type=number]');
+        var v = parseFloat(num.value); if(isNaN(v)||v<0) v = 0;
+        if(cb.checked) sum += v;
+      });
+      var year = sum*50, days = year/8;
+      document.getElementById('tcWeek').textContent = fmt(sum) + 'h';
+      document.getElementById('tcYear').textContent = Math.round(year) + 'h';
+      document.getElementById('tcDays').textContent = Math.round(days) + '일';
+    }
+    box.addEventListener('input', recalc);
+    box.addEventListener('change', recalc);
+    recalc();
+  })();
+
+  // ---- t8 DB/DC calculator ----
+  (function(){
+    var box = document.getElementById('appcalc'); if(!box) return;
+    function won(man){ // 만원 -> 표기
+      if(man >= 10000) return (man/10000).toFixed(2).replace(/\.?0+$/,'') + '억 원';
+      return Math.round(man).toLocaleString('ko-KR') + '만 원';
+    }
+    function recalc(){
+      var S = parseFloat(document.getElementById('cSal').value) || 0;
+      var N = Math.max(1, Math.min(45, parseInt(document.getElementById('cYrs').value,10) || 1));
+      var g = (parseFloat(document.getElementById('cG').value) || 0)/100;
+      var r = (parseFloat(document.getElementById('cR').value) || 0)/100;
+      var finalSal = S*Math.pow(1+g, N-1);
+      var db = finalSal/12*N;                       // 평균임금 30일분 x 근속 근사
+      var dc = 0;
+      for(var t=1; t<=N; t++){ dc += (S*Math.pow(1+g, t-1)/12) * Math.pow(1+r, N-t); }
+      var mx = Math.max(db, dc, 1);
+      document.getElementById('oDB').textContent = won(db);
+      document.getElementById('oDC').textContent = won(dc);
+      document.getElementById('fDB').style.width = (db/mx*100).toFixed(1)+'%';
+      document.getElementById('fDC').style.width = (dc/mx*100).toFixed(1)+'%';
+      var diff = dc - db, pct = db>0 ? Math.abs(diff)/db*100 : 0;
+      var msg;
+      if(Math.abs(diff) < S/12*0.5){ msg = '이 가정에서는 <b>두 제도가 비슷</b>합니다 — 상승률과 수익률의 줄다리기.'; }
+      else if(diff > 0){ msg = '이 가정에서는 <b>DC가 약 ' + won(diff) + ' (+' + pct.toFixed(0) + '%)</b> 더 큽니다 — 수익률이 상승률을 이기는 구간.'; }
+      else { msg = '이 가정에서는 <b>DB가 약 ' + won(-diff) + '</b> 더 큽니다 — 상승률이 수익률을 이기는 구간.'; }
+      document.getElementById('oDelta').innerHTML = msg;
+    }
+    box.addEventListener('input', recalc);
+    recalc();
+  })();
+
+
 })();
 </script>
 </body>
